@@ -3,8 +3,8 @@ import vk_api
 import g4f
 import time
 
-TELEGRAM_BOT_TOKEN = ''
-VK_TOKEN = ''
+TELEGRAM_BOT_TOKEN = '' #ваш токен телеграмм бота
+VK_TOKEN = '' #ваш access token вк
 text = f'пиши на русском и пожалуйста без лишних слов я тебе скину группы категории и ключевые слова которые тебе помогут ЧТОБЫ ОБЯЗАТЕЛЬНО В СУММЕ ВСЕ КАТЕГОРИИ ДАВАЛИ РОВНО 100% , а ты попробуй определить их категории и распределить по процентам, напиши только по шаблону, ничего остального не надо писать, ЧТОБЫ ОБЯЗАТЕЛЬНО В СУММЕ ВСЕ КАТЕГОРИИ ДАВАЛИ РОВНО 100%\
 Госорганизация-Администрация,Больницы,Детский сад,Дом престарелых,Объявления,Пенсионный фонд,Поиск работы \
 Здоровье-Витамины,Медицина,Похудение,Правильное питание,Фитнес,Тренажерный зал \
@@ -89,7 +89,7 @@ def welcome(message):
     item2 = telebot.types.KeyboardButton('Узнать профиль🔎')
     markup.add(item1, item2)
 
-    bot.send_message(message.chat.id, 'Привет, я бот в telegram. Отправь мне VK ID пользователя, например @User_name отправть User_name без лишних знаков', reply_markup=markup)
+    bot.send_message(message.chat.id, 'Привет, я бот в telegram. Отправь мне VK ID пользователя, например', reply_markup=markup)
 
 
 @bot.message_handler(func=lambda message: True)
